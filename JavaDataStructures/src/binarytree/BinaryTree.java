@@ -1,6 +1,10 @@
 package binarytree;
 
-
+/*
+ * Reference Video:
+ * https://www.youtube.com/watch?v=M6lYob8STMI
+ * https://www.youtube.com/watch?v=UcOxGmj45AA
+ */
 public class BinaryTree {
 	Node root;
 	public void addNode(int newKey, String newName) {
@@ -74,6 +78,7 @@ public class BinaryTree {
 	public boolean remove(int key) {
 		Node focusNode = root;
 		Node parent = root;
+		
 		boolean isItALeftChild = true;
 		
 		while ( focusNode.key != key ) {
@@ -88,7 +93,7 @@ public class BinaryTree {
 			}
 			if ( focusNode == null ) {
 				return false;
-			}
+			} 
 		}
 		
 		if ( focusNode.leftChild == null && focusNode.rightChild == null ) {
@@ -160,10 +165,17 @@ public class BinaryTree {
 		theTree.addNode(30, "Secretary");
 		theTree.addNode(75, "Sales Manager");
 		theTree.addNode(85, "Salesman 1");
+		System.out.println("==================================================");
 		theTree.inOrderTraverseTree(theTree.root);
+		System.out.println("==================================================");
 		//theTree.preOrderTraverseTree(theTree.root);
 		//theTree.postOrderTraverseTree(theTree.root);
 		System.out.println("Search for 30: " + theTree.findNode(30));
+		System.out.println("\nRemove Key 25\n");
+		theTree.remove(25);
+		System.out.println("==================================================");
+		theTree.inOrderTraverseTree(theTree.root);
+		System.out.println("==================================================");
 	}
 
 }
