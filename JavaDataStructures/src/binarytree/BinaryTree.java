@@ -176,6 +176,7 @@ public class BinaryTree {
 		System.out.println("==================================================");
 		theTree.inOrderTraverseTree(theTree.root);
 		System.out.println("==================================================");
+		System.out.println("testing commit");
 	}
 
 }
